@@ -1,0 +1,215 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creativ login Form</title>
+    <!-- <link rel="html" href="signup.html"> -->
+    <!-- <link rel="stylesheet" href="creativeslogin.css"> -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --lightblue-color:#beb6ff;
+        }
+        .container::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 650px;
+            z-index: -1;
+            background-image: url(./building\ unsplash.jpg);
+            background-size: cover;
+        }
+        .container::after{
+            content: "";
+    position: absolute;
+    width: 100%;
+    height: 650px;
+    z-index: -1;
+    /* background-image: url(./building\ unsplash.jpg); */
+    background-color: #3535bb;
+    background-size: cover;
+    opacity: 0.6;
+    top: 0;
+        }
+        .content{
+            width: 35%;
+    margin: auto;
+    position: relative;
+    top: 80;
+    display: flex;
+    flex-direction: column;
+        }
+        .signin,.signup{
+            font-size: 30;
+    color: white;
+    font-weight: 600;
+    font-family: sans-serif;
+        }
+        .signin{
+            border-bottom: 2px solid blue;
+        }
+        
+        /* .signup:focus{
+            border-bottom: 2px solid blue;
+        } */
+        .signup a{
+            color: #9183ff;
+    margin-left: 15px;
+    border: none;
+    text-decoration: none;
+        }
+        .username , .password{
+            text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 12px;
+    color: rgb(208 208 247);
+    font-family: sans-serif;
+    font-weight: 600;
+        }
+        .content .username-input, .password-input{
+            width: 100%;
+    height: 44px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: sans-serif;
+    color: #e9e9ff;
+    padding: 0 12px;
+    cursor: pointer;
+        }
+        .username::after{
+            content: "";
+    position: absolute;
+    width: 100%;
+    height: 44px;
+    background-color: #ffffff;
+    /* background: blue; */
+    opacity: 0.6;
+    top: 62px;
+    left: 0;
+    border-radius: 50px;
+    z-index: -1;
+        }
+        .password::after{
+            content: "";
+    position: absolute;
+    width: 100%;
+    height: 44px;
+    background-color: #ffffff;
+    /* background: blue; */
+    opacity: 0.6;
+    top: 134px;
+    left: 0;
+    border-radius: 50px;
+    z-index: -1;
+        }
+      
+        .cheakbox{
+             margin: 8px 0px;
+             font-size: 16px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: white;
+    cursor: pointer;
+
+        }
+        button.sign{
+            width: 100%;
+    height: 44px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: blue;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer;
+
+}
+        button.sign:hover{
+            opacity: 0.8;
+        }
+        .line{
+            width: 100%;
+    height: 2px;
+    background: #bbbaf1;
+    margin: 58px 0;
+        }
+        .forget a{
+            text-align: center;
+    color: #beb6ff;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 19px;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+        }
+        @media (min-width:1000px){
+    .content{
+        width: 40%;
+    }
+}
+@media  (max-width:1000px){
+    
+   .content{
+    width: 60%;
+   }
+}
+@media (max-width:500px){
+    .content{
+        width: 80%;
+    }
+    .signin, .signup {
+        font-size: 23px;
+    }
+    .cheakbox {
+        font-size: 12px;
+    }
+    button.sign {
+        font-size: 15px;
+    }
+
+    .username, .password, .firstname, .lastname, .confirm {
+        font-size: 13px;
+        margin-top: 14px;
+    }
+    .forget a {
+    font-size: 17px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="creativloginform.html">
+        <div class="content">
+            <header class="sign-head"><span class="signin">SIGN IN </span>
+                 <span class="signup"><a href="signup.html">SIGN UP</a></span>
+                </header>
+            <div class="username" >username</div>
+            <input type="text" class="username-input">
+            <div class="password">password</div>
+            <input type="password" class="password-input">
+            
+            <div class="cheakbox" ><input class="cheakbox" type="checkbox" id="cheakbox"> <label for="cheakbox"> Keep me Signed in</label> </div>
+            <button class="sign"  >SIGN IN </button>
+            <span class="line"></span>
+            <div class="forget"><a href="forgetpas.html">Forget password?</a></div>
+
+        </div>
+    </form>
+    </div>
+</body>
+</html>
